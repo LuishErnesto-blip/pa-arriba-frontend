@@ -36,18 +36,18 @@ const MiMetaDeHoy = () => {
     const [costoTotalOperativoDia, setCostoTotalOperativoDia] = useState(0);
     const [proyeccionVentasMeta, setProyeccionVentasMeta] = useState(0);
     const [gananciaNetaEsperada, setGananciaNetaEsperada] = useState(0);
-    const [filtroFechaInicio, setFiltroFechaInicio] = useState(new Date().toISOString().split('T')[0]);
-    const [filtroFechaFin, setFiltroFechaFin] = useState(new Date().toISOString().split('T')[0]);
-const API_URL = 'http://192.168.100.16:3000';
-    const mostrarMensaje = useCallback((tipo, mensaje) => {
-        if (tipo === 'exito') {
-            setMensajeExito(mensaje);
-            setTimeout(() => setMensajeExito(''), 3000);
-        } else {
-            setMensajeError(mensaje);
-            setTimeout(() => setMensajeError(''), 5000);
-        }
-    }, []);
+const [filtroFechaInicio, setFiltroFechaInicio] = useState(new Date().toISOString().split('T')[0]);
+const [filtroFechaFin, setFiltroFechaFin] = useState(new Date().toISOString().split('T')[0]);
+const API_URL = 'https://pa-arriba-backend-api.onrender.com'; // URL de tu backend desplegado en Render.com
+const mostrarMensaje = useCallback((tipo, mensaje) => {
+    if (tipo === 'exito') {
+        setMensajeExito(mensaje);
+        setTimeout(() => setMensajeExito(''), 3000);
+    } else {
+        setMensajeError(mensaje);
+        setTimeout(() => setMensajeError(''), 5000);
+    }
+}, []);
     const obtenerMetas = useCallback(async (fechaInicio, fechaFin) => {
         try {
             let url = `${API_URL}/metas-diarias`;
