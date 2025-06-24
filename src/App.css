@@ -35,4 +35,226 @@
   to {
     transform: rotate(360deg);
   }
+
+}
+.tabla-ventas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-ventas th, .tabla-ventas td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-ventas th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tabla-ventas tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabla-ventas tr:hover {
+  background-color: #ddd;
+}
+
+.formulario-ventas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.formulario-ventas input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario-ventas button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.formulario-ventas button:hover {
+  background-color: #45a049;
+}
+.mensaje-exito {
+  color: #4CAF50;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+.mensaje-error {
+  color: #D32F2F;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.paginacion button:hover {
+  background-color: #45a049;
+}
+.barra-busqueda {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.paginacion button:hover {
+  background-color: #45a049;
+}
+.barra-busqueda {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.paginacion button:hover {
+  background-color: #45a049;
+}
+
+.boton-editar {
+  background-color: #FFC107;
+  color: black;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.boton-editar:hover {
+  background-color: #E0A800;
+}
+.boton-eliminar {
+  background-color: #D32F2F;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.boton-eliminar:hover {
+  background-color: #B71C1C;
+}
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.formulario-login input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario-login button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.formulario-login button:hover {
+  background-color: #45a049;
+}
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.paginacion button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.paginacion span {
+  font-size: 16px;
+  margin: 0 10px;
 }

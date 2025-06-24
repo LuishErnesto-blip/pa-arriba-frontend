@@ -1,43 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="%PUBLIC_URL%/logoarriba.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+        name="description"
+        content="Aplicación de gestión de negocio para Pa' Arriba!"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font: Arial Italic (como fallback o para uso explícito si lo necesitas) -->
+    <!-- Nota: Arial es una fuente web segura y generalmente está disponible, no requiere importación directa de Google Fonts.
+        Si necesitas una versión específica o italic en navegadores antiguos, podrías considerarlo.
+        Para uso general, 'font-sans' con Montserrat como primera opción y 'sans-serif' ya cubre Arial. -->
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración personalizada de Tailwind CSS con tus colores y fuentes de marca -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Montserrat como fuente principal para sans-serif
+                        sans: ['Montserrat', 'sans-serif'],
+                        // Opcional: Si quieres una clase específica para Arial Italic
+                        // secondary: ['Arial Italic', 'Arial', 'sans-serif'], 
+                    },
+                    colors: {
+                        // Colores de tu marca con nombres intuitivos
+                        'pa-blue': '#1877f2',      // Azul eléctrico
+                        'pa-orange': '#ff5c00',    // Naranja vibrante
+                        'pa-green': '#1ed760',     // Verde dinámico
+                        'pa-black': '#000000',     // Negro puro
+                        'pa-white': '#FFFFFF',     // Blanco puro
+                        
+                        // Grises para texto y fondos según tu estilo minimalista/limpio
+                        'gray-bg': '#F3F4F6',      // Fondo general (más claro que el anterior gray-100 si lo deseas)
+                        'gray-text-dark': '#1F2937',// Texto principal oscuro
+                        'gray-text-light': '#6B7280',// Texto secundario/notas
+                        
+                        // Colores para feedback (semáforo) - ya definidos en Tailwind pero los reconfirmo por claridad
+                        'feedback-success': '#10B981', // Verde éxito
+                        'feedback-warning': '#F59E0B', // Amarillo advertencia
+                        'feedback-error': '#EF4444',   // Rojo error
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <title>Pa' Arriba!</title>
+</head>
+<body>
+    <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <!-- INICIO DE LA ÚNICA ADICIÓN: Script para la funcionalidad de Exportar a PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <!-- FIN DE LA ÚNICA ADICIÓN -->
+</body>
 </html>
