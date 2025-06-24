@@ -44,7 +44,7 @@ const MateriaPrimaInventario = () => {
         // 'proveedor' y 'factura' eliminados, ya que no existen en la tabla 'compras'
     });
 
-const API_URL = 'http://192.168.100.16:3000'; // Apunta a la IP de tu computadora donde está el backend
+const API_URL = 'https://pa-arriba-backend-api.onrender.com'; // URL de tu backend desplegado en Render.com
     // Función auxiliar para mostrar mensajes
     const mostrarMensaje = useCallback((tipo, mensaje) => {
         if (tipo === 'exito') {

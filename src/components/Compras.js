@@ -14,6 +14,7 @@ const PAARRIBA_COLORS = {
 };
 
 const Compras = () => {
+  const API_URL = 'https://pa-arriba-backend-api.onrender.com'; // URL de tu backend desplegado
   const [compras, setCompras] = useState([]);
   const [nuevaCompra, setNuevaCompra] = useState({
     producto: '',
@@ -44,7 +45,7 @@ const Compras = () => {
   // Función para obtener compras, ahora acepta filtros y no se limita al día
   const obtenerCompras = async (fechaInicio = '', fechaFin = '', producto = '') => {
     try {
-      let url = 'http://localhost:3000/compras'; // El backend aún está en /compras para todo
+let url = `${API_URL}/compras`;
       const params = [];
 
       if (fechaInicio) params.push(`fecha_inicio=${fechaInicio}`);
@@ -107,12 +108,12 @@ const Compras = () => {
     }
 
     try {
-      await axios.post('http://localhost:3000/compras', {
-        producto,
-        cantidad: parseFloat(cantidad),
-        unidad,
-        costo_unitario: parseFloat(costo_unitario)
-      });
+await axios.post(`${API_URL}/compras`, {
+      producto,
+      cantidad: parseFloat(cantidad),
+      unidad,
+      costo_unitario: parseFloat(costo_unitario)
+    });
       setMensajeExito('✅ Compra registrada exitosamente.');
       setTimeout(() => setMensajeExito(''), 3000);
       setNuevaCompra({ producto: '', cantidad: '', unidad: '', costo_unitario: '' }); // Limpiar formulario
@@ -167,8 +168,8 @@ const Compras = () => {
     }
 
     try {
-      await axios.put(`http://localhost:3000/compras/${id}`, {
-        producto,
+await axios.put(API_URL/compras/{id}, {
+      producto,
         cantidad: parseFloat(cantidad),
         unidad,
         costo_unitario: parseFloat(costo_unitario)
@@ -194,7 +195,7 @@ const Compras = () => {
       return;
     }
     try {
-      await axios.delete(`http://localhost:3000/compras/${compraId}`);
+await axios.delete(API_URL/compras/{compraId});
       setMensajeExito('✅ Compra eliminada exitosamente.');
       setTimeout(() => setMensajeExito(''), 3000);
       obtenerCompras(filtroFechaInicio, filtroFechaFin, filtroProducto); // Refresca con filtros

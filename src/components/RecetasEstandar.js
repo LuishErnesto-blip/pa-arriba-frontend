@@ -46,7 +46,7 @@ const [nuevaReceta, setNuevaReceta] = useState({ // Estado para el formulario de
     const [mensajeError, setMensajeError] = useState(null); // Mensaje de error para el usuario
 
     // URL de la API de tu backend
-const API_URL = 'http://192.168.100.16:3000';
+const API_URL = 'https://pa-arriba-backend-api.onrender.com'; // URL de tu backend desplegado
     // useCallback para manejar mensajes de éxito y error
     const mostrarMensaje = useCallback((tipo, mensaje) => {
         if (tipo === 'exito') {

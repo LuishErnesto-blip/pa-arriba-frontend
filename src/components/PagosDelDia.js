@@ -18,7 +18,7 @@ const PagosDelDia = () => {
 const [filtroTipoPago, setFiltroTipoPago] = useState(''); // Estado para el filtro por tipo de pago
 const [filtroFechaInicio, setFiltroFechaInicio] = useState(''); // Estado para la fecha de inicio del filtro
 const [filtroFechaFin, setFiltroFechaFin] = useState('');     // Estado para la fecha de fin del filtro
-const API_URL = 'http://192.168.100.16:3000';
+const API_URL = 'https://pa-arriba-backend-api.onrender.com'; // URL de tu backend desplegado
 // Reemplaza de la LÍNEA 20 a la LÍNEA 30:
 const obtenerPagos = useCallback(async () => {
     try {

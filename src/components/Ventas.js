@@ -35,7 +35,7 @@ const Ventas = () => {
     const [filtroFechaInicio, setFiltroFechaInicio] = useState('');
     const [filtroFechaFin, setFiltroFechaFin] = useState('');
 
-const API_URL = 'http://192.168.100.16:3000';
+    const API_URL = 'https://pa-arriba-backend-api.onrender.com'; // URL de tu backend desplegado
     // Envuelve obtenerVentas en useCallback
     const obtenerVentas = useCallback(async () => {
         try {
